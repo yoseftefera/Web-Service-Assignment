@@ -7,6 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ShapetoolApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ShapetoolApplicationTests.class, args);
+		SpringApplication.run(ShapetoolApplication.class, args);
 	}
 }
