@@ -50,15 +50,15 @@ public class WebServiceConfig implements org.springframework.ws.config.annotatio
         return wsdl;
     }
 
-    // 4. XSD Validation Interceptor (THIS FIXES YOUR ISSUE)
+    // 4. XSD Validation Interceptor
     @Bean
     public PayloadValidatingInterceptor validatingInterceptor() {
 
         PayloadValidatingInterceptor interceptor = new PayloadValidatingInterceptor();
 
         interceptor.setXsdSchema(shapetoolSchema());
-        interceptor.setValidateRequest(true);   // validate incoming SOAP request
-        interceptor.setValidateResponse(true);  // validate outgoing response
+        interceptor.setValidateRequest(true); // validate incoming SOAP request
+        interceptor.setValidateResponse(true); // validate outgoing response
 
         return interceptor;
     }
